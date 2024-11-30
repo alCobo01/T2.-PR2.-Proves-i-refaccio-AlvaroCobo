@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T2-PR2-ClassLibrary", "T2-P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T2-PR2-MSTest", "T2-PR2-MSTest\T2-PR2-MSTest.csproj", "{C435C2DD-37E2-4994-9BE7-F016EB4BF5A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T2-PR2-xUnit Test", "T2-PR2-xUnit Test\T2-PR2-xUnit Test.csproj", "{ACD7EF67-6060-4076-9F2A-4AE1C60429D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C435C2DD-37E2-4994-9BE7-F016EB4BF5A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C435C2DD-37E2-4994-9BE7-F016EB4BF5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C435C2DD-37E2-4994-9BE7-F016EB4BF5A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD7EF67-6060-4076-9F2A-4AE1C60429D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD7EF67-6060-4076-9F2A-4AE1C60429D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD7EF67-6060-4076-9F2A-4AE1C60429D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD7EF67-6060-4076-9F2A-4AE1C60429D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
