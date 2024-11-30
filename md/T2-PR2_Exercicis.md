@@ -66,6 +66,8 @@ què mètodes han sigut invocats. Amb això, l'Unit Testing pot verificar què e
 - **Crear els tests unitaris per a validar el teu codi**
 - **Documentar els patrons que has aplicat i els criteris per a executar els casos de prova**
 
+- **Renaming**: Tots els noms de les variables em semblen bé escollits. No he fet canvis.
+
 ### Exercici 5. Defineix els casos de prova i implements els tests unitaris pel següent problema.  En el mateix projecte que a l’exercici anterior, hauràs de:
 - **Crear una issue per la tasca que s’ha de dur a terme per fer les proves**
 - **Tancar les tasques mitjançant Visual Studio i les pull requests (PR)**
