@@ -136,6 +136,13 @@ calculant el valor esperat al mateix test, d'aquesta manera:
 de l'àrea passada com a paràmetre.
 
 
+- Captura de les issues per cada tasca del refactoring, pull requests i el projecte al repositori del GitHub:
+  ![githubPR](../img/ex4/githubPR.png)
+
+
+- Per veure el codi d'aquest exercici, visiteu aquest [link](../Projecte%20VS).
+
+
 ### Exercici 5. Defineix els casos de prova i implements els tests unitaris pel següent problema.  En el mateix projecte que a l’exercici anterior, hauràs de:
 - **Crear una issue per la tasca que s’ha de dur a terme per fer les proves**
 - **Tancar les tasques mitjançant Visual Studio i les pull requests (PR)**
