@@ -67,6 +67,8 @@ què mètodes han sigut invocats. Amb això, l'Unit Testing pot verificar què e
 - **Documentar els patrons que has aplicat i els criteris per a executar els casos de prova**
 
 - **Renaming**: Tots els noms de les variables em semblen bé escollits. No he fet canvis.
+- **Duplicitat del codi**: Creació de _ClassLibrary_ per extraure mètodes. Extracció a constants dels missatges per consola.
+Estructura del _if-else_ canviat a **switch** en imprimir el rang d'àrea per gust personal.
 
 ### Exercici 5. Defineix els casos de prova i implements els tests unitaris pel següent problema.  En el mateix projecte que a l’exercici anterior, hauràs de:
 - **Crear una issue per la tasca que s’ha de dur a terme per fer les proves**
