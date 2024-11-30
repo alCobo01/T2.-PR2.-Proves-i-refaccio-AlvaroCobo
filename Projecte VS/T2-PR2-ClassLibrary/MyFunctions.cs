@@ -9,17 +9,17 @@ namespace T2_PR2_ClassLibrary
             return value <= 0;
         }
 
-        public static double CalcularArea(double width, double height)
+        public static double CalculateArea(double width, double height)
         {
             return width * height;
         }
 
-        public static double CalcularCircumferencia(double radius)
+        public static double CalculateCircumference(double radius)
         {
             return 2 * Math.PI * radius;
         }
 
-        public static void ImprimirRangDeArea(double area)
+        public static void PrintAreaMessage(double area)
         {
             const string MissatgeAreaMesDe50 = "L'àrea és més gran de 50",
                 MissatgeAreaEntre20i50 = "L'àrea és entre 20 i 50",

@@ -27,9 +27,9 @@ class Program
         } while (MyFunctions.IsUnderZero(height));
 
         Console.WriteLine();
-        area = MyFunctions.CalcularArea(width, height);
+        area = MyFunctions.CalculateArea(width, height);
         Console.WriteLine(MissatgeAreaRectangle, area);
-        MyFunctions.ImprimirRangDeArea(area);
+        MyFunctions.PrintAreaMessage(area);
 
         // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
         do
@@ -39,7 +39,7 @@ class Program
         } while (MyFunctions.IsUnderZero(radius));
         
         // Calcula la circumferència
-        circumference = MyFunctions.CalcularCircumferencia(radius);
+        circumference = MyFunctions.CalculateCircumference(radius);
         Console.WriteLine(MissatgeCircumferencia, circumference);
     }
 }
