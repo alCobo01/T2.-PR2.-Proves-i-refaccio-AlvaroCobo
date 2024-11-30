@@ -137,6 +137,7 @@ de l'àrea passada com a paràmetre.
 
 
 - Captura de les issues per cada tasca del refactoring, pull requests i el projecte al repositori del GitHub:
+  
   ![githubPR](../img/ex4/githubPR.png)
 
 
