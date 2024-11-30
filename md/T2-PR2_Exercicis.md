@@ -78,6 +78,64 @@ Però, he pensat que era molt millor controlar l'entrada de l'usuari i fer una e
 sempre fossi "> 0". Aixì, les dades que rebren els mètodes sempre són vàlids i no hauràn de calcular una àrea negativa.
 He extret al mètode _IsUnderZero_ la condició que el valor que introdueixi l'usuari sigui major que 0.
 
+
+- **Test unitari**: Usant el tipus de projecte MSTest, he desenvolupat el testing pel meu codi per les 3 de les 4 funcions 
+que hi ha a la meva _Class Library_.
+  - **IsUnderZero**: Aquest mètode retorna un booleà, depenent de si el valor és menor o igual que 0. He desenvolupat dos
+test, un que invoca la funció amb una variable que conté un valor positiu, i un altre test amb valor negatiu.
+    ```c#
+    [TestMethod]
+    public void OverZero() {
+    //Arrange
+    double value = 32;
+    
+    //Act
+    bool result = MyFunctions.IsUnderZero(value);
+    
+    //Assert
+    Assert.IsFalse(result);
+    }
+    ```
+    He fet el mateix test per un valor negatiu, canviant la variable _value_ i el assert a _Assert.IsTrue_.    
+
+  - **CalculateArea**: El test està fet basat en el fet que la funció m'ha de retornar el resultat esperat. Això el faig
+calculant de manera manual el resultat, d'aquesta manera:
+    ```c#
+    [TestMethod]
+    public void CorrectArea() {
+    //Arrange
+    double width = 5;
+    double height = 10;
+    double expectedResult = 50;
+
+    //Act
+    double result = MyFunctions.CalculateArea(width, height);
+
+    //Assert
+    Assert.AreEqual(expectedResult, result); 
+    }
+    ```
+  - **CalculateCircumference**: Igual que amb _CalculateArea_, el test està basat en el fet que m'ha de retornar un valor esperat,
+calculant el valor esperat al mateix test, d'aquesta manera:
+    ```c#
+    [TestMethod]
+    public void CorrectCircumference() {
+    //Arrange
+    double radius = 5;
+    double expectedResult = 2 * Math.PI * radius;
+
+    //Act
+    double result = MyFunctions.CalculateCircumference(radius);
+
+    //Assert
+    Assert.AreEqual(expectedResult, result);
+    }
+    ```
+   
+  - **PrintAreaMessage**: Per aquest mètode no he pogut desenvolupar un test, perquè només printa un missatge depenent
+de l'àrea passada com a paràmetre.
+
+
 ### Exercici 5. Defineix els casos de prova i implements els tests unitaris pel següent problema.  En el mateix projecte que a l’exercici anterior, hauràs de:
 - **Crear una issue per la tasca que s’ha de dur a terme per fer les proves**
 - **Tancar les tasques mitjançant Visual Studio i les pull requests (PR)**

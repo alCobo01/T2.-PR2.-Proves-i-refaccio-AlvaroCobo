@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("T2-PR2-ClassLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2daccfba8023fa1765e4e0b8f20b288792d59bd7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+178289908cfe1ccf0e0bbd8d6c155e6c76f00104")]
 [assembly: System.Reflection.AssemblyProductAttribute("T2-PR2-ClassLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("T2-PR2-ClassLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
