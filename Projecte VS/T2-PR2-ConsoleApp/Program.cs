@@ -12,7 +12,6 @@ class Program
             MissatgeIntrodueixRadi = "Introdueix el radi del cercle: ",
             MissatgeCircumferencia = "La circumferència del cercle és: {0}";
 
-
         // Sol·licita l'entrada de l'usuari per calcular l'àrea d'un rectangle
         Console.Write(MissatgeIntrodueixAmplada);
         double width = Convert.ToDouble(Console.ReadLine());
