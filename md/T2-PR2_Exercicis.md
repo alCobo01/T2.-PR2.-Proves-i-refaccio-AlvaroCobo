@@ -66,12 +66,17 @@ què mètodes han sigut invocats. Amb això, l'Unit Testing pot verificar què e
 - **Crear els tests unitaris per a validar el teu codi**
 - **Documentar els patrons que has aplicat i els criteris per a executar els casos de prova**
 
+
 - **Renaming**: Tots els noms de les variables em semblen bé escollits. No he fet canvis.
 - **Duplicitat del codi**: Creació de _ClassLibrary_ per extraure mètodes. Extracció a constants dels missatges per consola.
 He extret els mètodes que calculen l'àrea i la circumferència, perque podrien ser utilitzats en una altra part del codi.
 Estructura del _if-else_ canviat a **switch** en imprimir el rang d'àrea per gust personal.
 - **Redundància del codi**: No hi ha variables ni constants sense utilitzar, ni codi comentat. Tampoc hi ha condicions que
 poden ser extretes a mètodes. Ja afegiré les condicions al _guard clauses_.
+- **Guard clauses**: Había pensat a llençar excepcions, si al calcular qualsevol cosa els valors eres iguals o menors que 0.
+Però, he pensat que era molt millor controlar l'entrada de l'usuari i fer una estructura _do-while_ perquè la seva entrada
+sempre fossi "> 0". Aixì, les dades que rebren els mètodes sempre són vàlids i no hauràn de calcular una àrea negativa.
+He extret al mètode _IsUnderZero_ la condició que el valor que introdueixi l'usuari sigui major que 0.
 
 ### Exercici 5. Defineix els casos de prova i implements els tests unitaris pel següent problema.  En el mateix projecte que a l’exercici anterior, hauràs de:
 - **Crear una issue per la tasca que s’ha de dur a terme per fer les proves**
