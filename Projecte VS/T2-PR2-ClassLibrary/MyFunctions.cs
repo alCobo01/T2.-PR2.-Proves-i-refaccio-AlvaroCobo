@@ -4,6 +4,11 @@ namespace T2_PR2_ClassLibrary
 {
     public class MyFunctions
     {
+        public static bool IsUnderZero(double value)
+        {
+            return value <= 0;
+        }
+
         public static double CalcularArea(double width, double height)
         {
             return width * height;
@@ -32,6 +37,7 @@ namespace T2_PR2_ClassLibrary
                     Console.WriteLine(MissatgeAreaMenorOigualA20);
                     break;
             }
+            Console.WriteLine();
         }
 
     }
