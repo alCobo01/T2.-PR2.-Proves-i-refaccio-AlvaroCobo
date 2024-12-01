@@ -52,12 +52,48 @@ que s'executi en cada invocació.
 
 4. **Spies**: Similar als _stubs_, però els **spies** a més de simular el comportament d'un mètode, també controlaràn
 què mètodes han sigut invocats. Amb això, l'Unit Testing pot verificar què els mètodes han sigut invocats com s'espera.
+   - Per exemple, un mètode que registri quantes vegades s'ha invocat un altre mètode:
+   
+   ```c#
+    public class AuthenticationSpy {
+        int LoginCount = 0;  // Variable pública per simplicitat
+        
+        public void Login(string user)
+        {
+            LoginCount++;  // Simplement compta les vegades que es crida
+        }
+    }
+   ```
 
-5. **Fakes**:
+5. **Fakes**: Són implementacions simplificades d'interfaces o classes que proporcionen la mateixa funcionalitat que el 
+component real però de manera més simple i controlada. A diferència dels stubs que retornen valors fixos, els fakes tenen 
+una implementació funcional però simplificada.
+   - Per exemple, simulem una llista d'usuaris amb una funció que guarda noms al array
 
-![esquemaTipusTestDoubles](../img/ex2/tipusTestDoubles.jpg)
+    ```c#
+    public class UserRepositoryFake {
+        string[] users = new string[10];
+        
+        public void Add(string name)
+        {
+            users[0] = name;
+        }
+    }
+    ```
+
+La principal diferència entre els diferents tipus de dobles de prova és:
+- Els **dummies** són els més simples, només per complir amb signatures de mètodes
+- Els **stubs** retornen valors predefinits
+- Els **mocks** verifiquen com s'utilitzen els mètodes
+- Els **spies** registren les invocacions dels mètodes
+- Els **fakes** proporcionen implementacions simplificades però funcionals
+
+
+    ![esquemaTipusTestDoubles](../img/ex2/tipusTestDoubles.jpg)
 
 ### Exercici 3. Què és CI/CD? Fes un vídeo explicant les característiques bàsiques, el seu flux de treball i un exemple pràctic d’integració amb GitHub d’una solució en C#.
+[Enllaç](https://youtu.be/ILwd8BBm_Rc) al vídeo penjat a YouTube
+
 
 ### Exercici 4. Aplica els patrons de refacció més habituals en el codi que trobaràs en aquest enllaç. Hauràs de:
 - **Crear un projecte vinculat al teu repositori de la tasca**
@@ -224,6 +260,7 @@ de l'àrea passada com a paràmetre.
 amb _age = 121_, en retorna 2 perquè és més gran de 65, però hauria de retornar -1 per ser invàlid.
 
 ### Exercici 6. Què són els analitzadors de codi? Fes un vídeo explicant les característiques principals i mostra la configuració i funcionament de Sonarqube amb una solució teva en C#.
+[Enllaç](https://youtu.be/_LzkkI20KY4) al vídeo penjat a YouTube
 
 ### Exercici 7. Indica les referències que has consultat (pàgines web, llibres, revistes...), seguint el següent format:
 
@@ -233,6 +270,8 @@ amb _age = 121_, en retorna 2 perquè és més gran de 65, però hauria de retor
 - Antonio Leiva (05/01/2023). ¿Qué son los dobles de test?. DevExpert. Recuperat el 30/11/2024 de [link a la pàgina](https://devexpert.io/dobles-test)
 - Diversos autors (última edició 09/11/2024). Test double. Wikipedia. Recuperat el 30/11/2024 de [link a la pàgina](https://en.wikipedia.org/wiki/Test_double)
 - Red Hat (12/12/2023). What is CI/CD? Red Hat. Recuperat el 28/11/2025 de [link a la pagina](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
+- GitHub (sense data). GitHub Actions Quick Start Guide. GitHub Documentation. Recuperat el 01/12/2024 de [link a la pàgina](https://docs.github.com/es/actions/writing-workflows/quickstart)
+- 0xNehru (03/04/2024). Comprehensive Guide: Installing and Configuring SonarQube on Windows. Medium. Recuperat el 01/12/2024 de [link a la pàgina](https://0xnehru.medium.com/comprehensive-guide-installing-and-configuring-sonarqube-on-windows-9870ae80b8e6)
 
 #### Articles
 - Mark Seemann. (2007). Exploring The Continuum Of Test Doubles. [Link](https://learn.microsoft.com/en-us/archive/msdn-magazine/2007/september/unit-testing-exploring-the-continuum-of-test-doubles)
