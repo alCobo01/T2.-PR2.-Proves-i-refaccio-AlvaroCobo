@@ -150,6 +150,75 @@ de l'àrea passada com a paràmetre.
 - **Crear els tests unitaris per a validar la .dll fent servir el framework XUNit**
 - **Documentar els criteris per a executar els casos de prova i les incidències detectades (si s’escau)**
 
+**Casos de prova:**
+1. ClassifyAge(int age)
+   - **Classes d'equivalència**
+     - [0-17] retorna 0 (infància)
+     - [18-65] retorna 1 (adult)
+     - [66-120] retorna 2 (senescència)
+     - [Menor que 0] retorna -1 (desconegut)
+     - [Major que 120] retorna -1 (desconegut)
+   - **Valors límit**
+     - 0, 17, 18, 65, 66, -1, 121
+   - **Casos de prova**
+     - age = 0 -> dins del rang, retorna 0 (infància)
+     - age = 17 -> dins del rang, retorna 0 (infància)
+     - age = 18 -> dins del rang, retorna 1 (adult)
+     - age = 65 -> dins del rang, retorna 1 (adult)
+     - age = 66 -> dins del rang, retorna 2 (senescència)
+     - age = -1 -> fora del rang, retorna -1 (desconegut)
+     - age = 121 -> fora del rang, retorna -1 (desconegut)
+
+2. ClassifyAge(int age)
+    - **Classes d'equivalència**
+        - [Nombre parell] retorna _true_
+        - [Nombre senar] retorna _false_
+    - **Valors límit**
+        - 0, 1, 2
+    - **Casos de prova**
+        - age = 0 -> és parell, retorna _true_
+        - age = 1 -> és senar, retorna _false_
+        - age = 2 -> és parell, retorna _true_
+
+3. NameAnalyser(string name)
+    - **Classes d'equivalència**
+        - [Nom curt < 5 caràcters] retorna _IsShort = true_
+        - [Nom llarg > 5 caràcters] retorna _IsShort = false_
+        - [Nom palíndrom] retorna _IsPalindrome = true_
+        - [Nom no palíndrom] retorna _IsPalindrome = false_
+    - **Valors límit**
+        - Length de 4, length de 5
+    - **Casos de prova**
+        - name = "anna" -> curt i és palíndrom, retorna (true, true)
+        - name = "juan" -> curt i no és palíndrom, retorna (true, false)
+        - name = "radar" -> llarg i és palíndrom, retorna (false, true)
+        - name = "house" -> llarg i no és palíndrom, retorna (false, false)
+
+4. VerifyColour(string colour)
+    - **Classes d'equivalència**
+        - [blau & verd] retorna 0 (calmant)
+        - [null or empty] retorna -1 (no vàlid)
+        - [Qualsevol altre color] retorna 1 (exclusiu)
+    - **Valors límit**
+        - No hi ha valors límit
+    - **Casos de prova**
+        - colour = "blau" -> calmant, retorna 0
+        - colour = "verd" -> calmant, retorna 0
+        - colour = "negre" -> exclusiu, retorna 1
+        - colour = "" -> empty, retorna -1
+
+5. PersonalityTest(string preference)
+    - **Classes d'equivalència**
+        - ["matí"] retorna 0 (matinal)
+        - ["nit"] retorna 1 (nocturna)
+        - [Altra preferència] retorna 2 (imprevista)
+    - **Valors límit**
+        - No hi ha valors límit
+    - **Casos de prova**
+        - preference = "matí" -> matinal, retorna 0
+        - preference = "nit" -> nocturna, retorna 1
+        - preference = "tarda" -> desconeguda, retorna 2
+
 ### Exercici 6. Què són els analitzadors de codi? Fes un vídeo explicant les característiques principals i mostra la configuració i funcionament de Sonarqube amb una solució teva en C#.
 
 ### Exercici 7. Indica les referències que has consultat (pàgines web, llibres, revistes...), seguint el següent format:
