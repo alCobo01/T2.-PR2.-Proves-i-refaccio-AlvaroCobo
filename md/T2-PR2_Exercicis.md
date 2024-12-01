@@ -220,6 +220,18 @@ de l'àrea passada com a paràmetre.
         - preference = "tarda" -> desconeguda, retorna 2
 
 
+**Classes d'equivalència després d'executar els tests, per funció**:
+ClassifyAge:
+| Nom cas de prova          | Descripció                          | Entrada | Accions                            | Resultat esperat | Resultat obtingut |
+|---------------------------|-------------------------------------|---------|------------------------------------|------------------|-------------------|
+| Límit del rang infància 1 | Comprova el límit del rang per sota |    0    | Crida al mètode amb 0 com argument |         0        |         0         |
+| Límit del rang infància 2 |                                     |    17   |                                    |         0        |         0         |
+|                           |                                     |    18   |                                    |         1        |         1         |
+|                           |                                     |    65   |                                    |         1        |         1         |
+|                           |                                     |    66   |                                    |         2        |         2         |
+|                           |                                     |    -1   |                                    |        -1        |         0         |
+|                           |                                     |   121   |                                    |        -1        |         2         |
+
 **Incidències detectades**:
 - ClassifyAge: Amb el valor _age = -1_ retorna 0 (infància), quan és un valor invàlid i hauría de retornar -1. El mateix
 amb _age = 121_, en retorna 2 perquè és més gran de 65, però hauria de retornar -1 per ser invàlid.
