@@ -259,6 +259,8 @@ de l'àrea passada com a paràmetre.
 - ClassifyAge: Amb el valor _age = -1_ retorna 0 (infància), quan és un valor invàlid i hauría de retornar -1. El mateix
 amb _age = 121_, en retorna 2 perquè és més gran de 65, però hauria de retornar -1 per ser invàlid.
 
+- Per veure el codi d'aquest exercici, visiteu aquest [link](../Projecte%20VS/T2-PR2-xUnit%20Test).
+
 ### Exercici 6. Què són els analitzadors de codi? Fes un vídeo explicant les característiques principals i mostra la configuració i funcionament de Sonarqube amb una solució teva en C#.
 [Enllaç](https://youtu.be/_LzkkI20KY4) al vídeo penjat a YouTube
 
