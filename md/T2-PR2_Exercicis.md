@@ -169,7 +169,7 @@ de l'àrea passada com a paràmetre.
      - age = -1 -> fora del rang, retorna -1 (desconegut)
      - age = 121 -> fora del rang, retorna -1 (desconegut)
 
-2. ClassifyAge(int age)
+2. IsEven(int age)
     - **Classes d'equivalència**
         - [Nombre parell] retorna _true_
         - [Nombre senar] retorna _false_
@@ -218,6 +218,11 @@ de l'àrea passada com a paràmetre.
         - preference = "matí" -> matinal, retorna 0
         - preference = "nit" -> nocturna, retorna 1
         - preference = "tarda" -> desconeguda, retorna 2
+
+
+**Incidències detectades**:
+- ClassifyAge: Amb el valor _age = -1_ retorna 0 (infància), quan és un valor invàlid i hauría de retornar -1. El mateix
+amb _age = 121_, en retorna 2 perquè és més gran de 65, però hauria de retornar -1 per ser invàlid.
 
 ### Exercici 6. Què són els analitzadors de codi? Fes un vídeo explicant les característiques principals i mostra la configuració i funcionament de Sonarqube amb una solució teva en C#.
 
