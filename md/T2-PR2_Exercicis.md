@@ -219,7 +219,6 @@ de l'àrea passada com a paràmetre.
         - preference = "nit" -> nocturna, retorna 1
         - preference = "tarda" -> desconeguda, retorna 2
 
-
 **Incidències detectades**:
 - ClassifyAge: Amb el valor _age = -1_ retorna 0 (infància), quan és un valor invàlid i hauría de retornar -1. El mateix
 amb _age = 121_, en retorna 2 perquè és més gran de 65, però hauria de retornar -1 per ser invàlid.
